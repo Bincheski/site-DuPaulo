@@ -26,13 +26,13 @@
    <header id="header" class="fixed top-13 w-full z-20 transition-all duration-300 bg-transparent-900 h-13">
   <div class="container mx-auto px-5 py-5">
     <div class="flex items-center justify-between">
-      <!-- Logo -->
-      <div class="absolute top-2 left-1/2 transform -translate-x-1/2 h-56 transition-all duration-300 ease-in-out" id="logo-container">
-        <img src="./img/icone logo fundo preto.png"
-             alt="Logo Restaurante DuPaulo"
-             class="h-56 object-cover transition-all duration-300 ease-in-out"
-             id="logo-img" />
-      </div>
+ <!-- Logo -->
+<div id="logo-container" class="absolute top-2 left-1/2 transform -translate-x-1/2 h-40 md:h-56 transition-all duration-300 ease-in-out">
+  <img src="./img/icone logo fundo preto.png"
+       alt="Logo Restaurante DuPaulo"
+       id="logo-img"
+       class="h-40 md:h-56 object-cover transition-all duration-300 ease-in-out" />
+</div>
       <div class="w-32"></div>
     </div>
 
@@ -72,39 +72,43 @@
         <div class="absolute inset-0 bg-stone-900/70"></div>
     </div>
 
-    <!-- Content -->
-    <div class="relative z-10 container mx-auto px-4 py-20 text-center">
-        <div class="max-w-4xl mx-auto">
-            <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-                Durante o dia, deliciosos almoços executivos. À noite, hambúrgueres artesanais que despertam todos os sentidos.
-            </p>
+ <!-- Content -->
+<div class="relative z-10 container mx-auto px-4 py-32 text-center"> <!-- espaçamento vertical aumentado -->
+  <div class="max-w-4xl mx-auto mt-16"> <!-- margem superior extra -->
+    
+    <!-- Texto visível em todas as telas -->
+    <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+      Durante o dia, deliciosos almoços executivos. À noite, hambúrgueres artesanais que despertam todos os sentidos.
+    </p>
 
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                <div class="flex items-center text-yellow-400">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <span class="text-lg">Almoço: 11h às 16h</span>
-                </div>
-                <div class="hidden sm:block text-gray-500">|</div>
-                <div class="flex items-center text-red-500">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
-                    </svg>
-                    <span class="text-lg">Hambúrgueres: Seg a Qui 18h às 23h e Sex a Sab 18h às 24h</span>
-                </div>
-            </div>
-
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button onclick="scrollToSection('cardapio')" class="bg-yellow-400 text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                    Ver Cardápio
-                </button>
-                <button onclick="scrollToSection('contato')" class="border-2 border-red-500 text-red-500 px-8 py-4 rounded-full font-bold text-lg hover:bg-red-500 hover:text-white transition-all duration-300 transform hover:scale-105">
-                    Fale Conosco
-                </button>
-            </div>
-        </div>
+    <!-- Horários -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+      <div class="flex items-center text-yellow-400">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span class="text-lg">Almoço: 11h às 16h</span>
+      </div>
+      <div class="hidden sm:block text-gray-500">|</div>
+      <div class="flex items-center text-red-500">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+        </svg>
+        <span class="text-lg">Hambúrgueres: Seg a Qui 18h às 23h e Sex a Sab 18h às 24h</span>
+      </div>
     </div>
+
+    <!-- Botões -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <button onclick="scrollToSection('cardapio')" class="bg-yellow-400 text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105 shadow-lg">
+        Ver Cardápio
+      </button>
+      <button onclick="scrollToSection('contato')" class="border-2 border-red-500 text-red-500 px-8 py-4 rounded-full font-bold text-lg hover:bg-red-500 hover:text-white transition-all duration-300 transform hover:scale-105">
+        Fale Conosco
+      </button>
+    </div>
+  </div>
+</div>
 
     <!-- Scroll Indicator -->
     <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
@@ -565,24 +569,30 @@ window.addEventListener('scroll', () => {
     header.classList.add('bg-stone-900', 'h-15');
 
     // Logo container
-    logoContainer.classList.remove('h-56');
+    logoContainer.classList.remove('h-40', 'md:h-56');
     logoContainer.classList.add('h-16');
 
     // Logo image
-    logoImg.classList.remove('h-28', 'h-56');
+    logoImg.classList.remove('h-40', 'md:h-56');
     logoImg.classList.add('h-12');
   } else {
     // Header
-    header.classList.remove('bg-stone-900', 'h-20');
+    header.classList.remove('bg-stone-900', 'h-15');
     header.classList.add('bg-transparent', 'h-44');
 
     // Logo container
     logoContainer.classList.remove('h-16');
-    logoContainer.classList.add('h-56');
+    logoContainer.classList.add('h-40');
+    if (window.innerWidth >= 768) {
+      logoContainer.classList.add('md:h-56');
+    }
 
     // Logo image
     logoImg.classList.remove('h-12');
-    logoImg.classList.add('h-56');
+    logoImg.classList.add('h-40');
+    if (window.innerWidth >= 768) {
+      logoImg.classList.add('md:h-56');
+    }
   }
 });
 
