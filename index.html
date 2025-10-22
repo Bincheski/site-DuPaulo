@@ -465,9 +465,9 @@
                         © 2025 Restaurante DuPaulo. Todos os direitos reservados.
                     </p>
                     <div class="flex space-x-6 text-sm">
-                        <button class="text-gray-400 hover:text-white transition-colors duration-300">
-                            Política de Privacidade
-                        </button>
+                        <button onclick="openPrivacyModal()" class="text-gray-400 hover:text-white transition-colors duration-300">
+  Política de Privacidade
+</button>
                        <button onclick="openModal()" class="text-gray-400 hover:text-white transition-colors duration-300">
   Termos de Uso
 </button>
@@ -534,6 +534,43 @@
     <p class="mb-4">Em caso de dúvidas, entre em contato pela seção <strong>Fale Conosco</strong>.</p>
 
     <p class="mt-6 text-center text-gray-400 italic">Ao continuar navegando, você declara estar ciente e de acordo com este Termo de Uso.</p>
+  </div>
+</div>
+
+<!-- Modal de Política de Privacidade -->
+<div id="modal-privacidade" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 hidden">
+  <div class="bg-stone-900 text-stone-200 max-w-3xl w-full mx-4 p-8 rounded-lg shadow-lg overflow-y-auto max-h-[80vh] relative">
+    <button onclick="closePrivacyModal()" class="absolute top-4 right-4 text-stone-400 hover:text-red-500 text-2xl font-bold">&times;</button>
+    <h2 class="text-3xl font-bold text-yellow-400 mb-6 text-center">Política de Privacidade</h2>
+
+    <p class="mb-4 text-gray-300">Última atualização: 22 de outubro de 2025</p>
+    <p class="mb-4">Esta Política de Privacidade descreve como o <strong>Restaurante DuPaulo</strong> coleta, utiliza e protege as informações fornecidas pelos usuários ao utilizar nosso site.</p>
+
+    <h3 class="text-xl font-semibold text-yellow-300 mt-6 mb-2">1. Coleta de Informações</h3>
+    <p class="mb-4">Nosso site não coleta dados pessoais automaticamente. Informações fornecidas voluntariamente por meio de formulários de contato ou mensagens são utilizadas exclusivamente para fins de atendimento.</p>
+
+    <h3 class="text-xl font-semibold text-yellow-300 mt-6 mb-2">2. Uso das Informações</h3>
+    <p class="mb-4">As informações fornecidas são utilizadas para responder solicitações, melhorar nossos serviços e, quando autorizado, enviar comunicações relacionadas ao Restaurante DuPaulo.</p>
+
+    <h3 class="text-xl font-semibold text-yellow-300 mt-6 mb-2">3. Compartilhamento de Dados</h3>
+    <p class="mb-4">Não compartilhamos suas informações com terceiros, exceto quando necessário para cumprir obrigações legais ou mediante autorização expressa do usuário.</p>
+
+    <h3 class="text-xl font-semibold text-yellow-300 mt-6 mb-2">4. Segurança</h3>
+    <p class="mb-4">Adotamos medidas de segurança para proteger suas informações contra acesso não autorizado, alteração ou divulgação indevida.</p>
+
+    <h3 class="text-xl font-semibold text-yellow-300 mt-6 mb-2">5. Cookies</h3>
+    <p class="mb-4">Nosso site pode utilizar cookies para melhorar a experiência de navegação. Você pode desativá-los nas configurações do seu navegador, se preferir.</p>
+
+    <h3 class="text-xl font-semibold text-yellow-300 mt-6 mb-2">6. Links Externos</h3>
+    <p class="mb-4">Nosso site pode conter links para sites externos. Não nos responsabilizamos pelas práticas de privacidade desses sites.</p>
+
+    <h3 class="text-xl font-semibold text-yellow-300 mt-6 mb-2">7. Alterações nesta Política</h3>
+    <p class="mb-4">Podemos atualizar esta Política de Privacidade periodicamente. Recomendamos que você a revise regularmente.</p>
+
+    <h3 class="text-xl font-semibold text-yellow-300 mt-6 mb-2">8. Contato</h3>
+    <p class="mb-4">Em caso de dúvidas sobre esta política, entre em contato conosco pela seção <strong>Fale Conosco</strong>.</p>
+
+    <p class="mt-6 text-center text-gray-400 italic">Ao continuar navegando, você concorda com esta Política de Privacidade.</p>
   </div>
 </div>
 
@@ -642,9 +679,14 @@ function openModal() {
     document.getElementById('modal-termos').classList.add('hidden');
   }
 
+  function openPrivacyModal() {
+    document.getElementById('modal-privacidade').classList.remove('hidden');
+  }
 
+  function closePrivacyModal() {
+    document.getElementById('modal-privacidade').classList.add('hidden');
+  }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
-</html>
-
+<html>
