@@ -468,9 +468,9 @@
                         <button class="text-gray-400 hover:text-white transition-colors duration-300">
                             Política de Privacidade
                         </button>
-                        <button class="text-gray-400 hover:text-white transition-colors duration-300">
-                            Termos de Uso
-                        </button>
+                       <button onclick="openModal()" class="text-gray-400 hover:text-white transition-colors duration-300">
+  Termos de Uso
+</button>
                     </div>
                 </div>
             </div>
@@ -497,6 +497,44 @@
       ></path>
     </svg>
   </a>
+</div>
+
+<!-- Modal de Termos de Uso -->
+<div id="modal-termos" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 hidden">
+  <div class="bg-stone-900 text-stone-200 max-w-3xl w-full mx-4 p-8 rounded-lg shadow-lg overflow-y-auto max-h-[80vh] relative">
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-stone-400 hover:text-red-500 text-2xl font-bold">&times;</button>
+    <h2 class="text-3xl font-bold text-yellow-400 mb-6 text-center">Termo de Uso</h2>
+
+    <p class="mb-4 text-gray-300">Última atualização: 22 de outubro de 2025</p>
+    <p class="mb-4">Bem-vindo ao site do <strong>Restaurante DuPaulo</strong>. Ao acessar e utilizar este site, você concorda com os termos e condições descritos abaixo.</p>
+
+    <h3 class="text-xl font-semibold text-yellow-300 mt-6 mb-2">1. Objetivo do Site</h3>
+    <p class="mb-4">Este site tem como finalidade apresentar informações sobre o Restaurante DuPaulo, incluindo horários, cardápio, fotos, filiais e formas de contato.</p>
+
+    <h3 class="text-xl font-semibold text-yellow-300 mt-6 mb-2">2. Propriedade Intelectual</h3>
+    <p class="mb-4">Todo o conteúdo presente neste site é de propriedade do Restaurante DuPaulo ou utilizado com autorização de terceiros. É proibida a reprodução sem consentimento prévio.</p>
+
+    <h3 class="text-xl font-semibold text-yellow-300 mt-6 mb-2">3. Uso Permitido</h3>
+    <p class="mb-4">Você pode navegar livremente pelo site. É vedado qualquer uso que viole leis vigentes ou comprometa a segurança da plataforma.</p>
+
+    <h3 class="text-xl font-semibold text-yellow-300 mt-6 mb-2">4. Privacidade e Dados</h3>
+    <p class="mb-4">Este site não coleta dados pessoais automaticamente. Dados enviados por contato serão tratados com confidencialidade.</p>
+
+    <h3 class="text-xl font-semibold text-yellow-300 mt-6 mb-2">5. Responsabilidades</h3>
+    <ul class="list-disc list-inside mb-4 text-gray-300">
+      <li>Eventuais erros de digitação ou omissões</li>
+      <li>Disponibilidade contínua do site</li>
+      <li>Conteúdo de sites de terceiros mencionados</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold text-yellow-300 mt-6 mb-2">6. Alterações nos Termos</h3>
+    <p class="mb-4">Estes termos podem ser atualizados a qualquer momento, sem aviso prévio.</p>
+
+    <h3 class="text-xl font-semibold text-yellow-300 mt-6 mb-2">7. Contato</h3>
+    <p class="mb-4">Em caso de dúvidas, entre em contato pela seção <strong>Fale Conosco</strong>.</p>
+
+    <p class="mt-6 text-center text-gray-400 italic">Ao continuar navegando, você declara estar ciente e de acordo com este Termo de Uso.</p>
+  </div>
 </div>
 
     <script>
@@ -595,6 +633,15 @@ window.addEventListener('scroll', () => {
     }
   }
 });
+
+function openModal() {
+    document.getElementById('modal-termos').classList.remove('hidden');
+  }
+
+  function closeModal() {
+    document.getElementById('modal-termos').classList.add('hidden');
+  }
+
 
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
