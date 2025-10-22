@@ -1,0 +1,37 @@
+# 🍔 Restaurante DuPaulo — Site Oficial
+
+Este projeto é o site institucional do **Restaurante DuPaulo**, desenvolvido com foco em apresentar a proposta gastronômica do restaurante, seus horários de funcionamento, cardápio, localização e canais de contato. O site oferece uma experiência visual moderna, responsiva e interativa, adaptada para todos os dispositivos.
+
+## ✨ Funcionalidades
+
+- **Seção Hero** com imagem de fundo e chamada principal
+- **Horários de funcionamento** para almoço e hambúrgueres
+- **Botões de navegação suave** para seções internas
+- **Cardápio dividido por períodos** com alternância entre almoço e jantar
+- **Galeria de fotos** com Lightbox
+- **Informações de contato e redes sociais**
+- **Footer completo** com endereço, telefone, horários e links úteis
+- **Modais interativos** para exibição dos Termos de Uso e Política de Privacidade
+
+## 🛠️ Tecnologias utilizadas
+
+- HTML5
+- Tailwind CSS
+- JavaScript Vanilla
+- Lightbox2 (para galeria de imagens)
+
+## 🎯 Finalidade
+
+O objetivo do site é divulgar o Restaurante DuPaulo de forma profissional, clara e atrativa, permitindo que os visitantes conheçam os serviços oferecidos, visualizem o cardápio e entrem em contato com facilidade.
+
+## 👤 Criador
+
+Este projeto foi desenvolvido por **[Seu Nome Aqui]**, apaixonado por desenvolvimento web e experiências digitais que encantam usuários.
+
+## 🔗 Mais projetos
+
+Você pode encontrar outros projetos e acompanhar meu trabalho através do meu GitHub:
+
+👉 [github.com/seu-usuario](https://github.com/seu-usuario)
+
+---
