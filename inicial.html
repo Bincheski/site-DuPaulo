@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante DuPaulo - Nossas Filiais</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-stone-100 font-sans">
+    <!-- Header -->
+<header class="bg-gradient-to-r from-red-700 via-red-800 to-gray-900 shadow-lg relative z-20 h-28">
+  <div class="container mx-auto px-4 h-full flex items-center relative">
+    <!-- Texto à esquerda -->
+    <h1 class="text-3xl font-extrabold text-white tracking-wide">Restaurante DuPaulo</h1>
+
+    <!-- Logo centralizada -->
+    <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
+      <img src="./img/icone logo fundo preto.png" alt="Logo Restaurante DuPaulo" class="w-24 h-24" />
+    </div>
+  </div>
+</header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen lg:min-h-[600px] xl:min-h-[700px] flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" style="background-image: url('./img/capa de fundo hero.png');">
+            <div class="absolute inset-0 bg-stone-900/70"></div>
+        </div>
+
+        <!-- Seção Principal -->
+        <main class="container mx-auto px-4 py-12 relative z-10">
+            <h2 class="text-4xl font-bold text-center text-white mb-8">Escolha seu Restaurante</h2>
+            <p class="text-center text-white mb-12">Descubra nossos restaurantes espalhados pela cidade. Cada uma oferece uma experiência única com pratos deliciosos e atendimento excepcional.</p>
+            
+            <!-- Grid de Filiais -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Filial 1 -->
+                <div class="bg-white/80 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-stone-200">
+                    <img src="./img/capa de fundo hero.png" alt="Filial Centro" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-stone-800 mb-2">Filial CPG</h3>
+                        <p class="text-stone-600 mb-4">Buffet completo ao meio-dia e hambúrgueres à noite, tudo isso em um local fácil de chegar e cheio de sabor.</p>
+                        <a href="index.html" class="inline-block bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors duration-300">
+                            <i class="fas fa-arrow-right mr-2 text-yellow-300"></i>Visitar Filial
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Filial 2 -->
+                <div class="bg-white/80 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-stone-200">
+                    <img src="https://via.placeholder.com/400x250?text=Filial+Norte" alt="Filial Norte" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-stone-800 mb-2">Xis DuPaulo</h3>
+                        <p class="text-stone-600 mb-4">Ambiente acolhedor com vista para o parque, ideal para famílias e grupos.</p>
+                        <a href="filial-norte.html" class="inline-block bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors duration-300">
+                            <i class="fas fa-arrow-right mr-2 text-yellow-300"></i>Visitar Filial
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Filial 3 -->
+                <div class="bg-white/80 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-stone-200">
+                    <img src="https://via.placeholder.com/400x250?text=Filial+Sul" alt="Filial Sul" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-stone-800 mb-2">Lanches DuPaulo</h3>
+                        <p class="text-stone-600 mb-4">Especializada em culinária internacional, com opções veganas e sem glúten.</p>
+                        <a href="filial-sul.html" class="inline-block bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors duration-300">
+                            <i class="fas fa-arrow-right mr-2 text-yellow-300"></i>Visitar Filial
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 relative z-20">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Restaurante DuPaulo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
