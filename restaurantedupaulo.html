@@ -1,0 +1,42 @@
+<!-- Seção para Almoço do Dia -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-stone-800 mb-4">
+            Almoço do <span class="text-yellow-500">Dia</span>
+        </h2>
+        <div id="almoco-container" class="max-w-2xl mx-auto text-stone-700 text-lg">
+            <!-- O texto do Google Docs será inserido aqui -->
+            <p>Carregando informações do almoço...</p>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript para carregar texto do Google Docs -->
+<script>
+    // URL pública do seu Google Doc (substitua pela sua)
+    const googleDocURL = 'https://docs.google.com/document/d/e/2PACX-1vTCKU6YXHj1q84NZrw1NdeNJl7TnXFXxRoTteJSnkQIltNOWhv6V7HoW367jp47KjJ8iUS1L0rHekbw/pub'; // Substitua SEU_DOC_ID
+
+    async function loadAlmocoDoDia() {
+        try {
+            const response = await fetch(googleDocURL);
+            const htmlText = await response.text();
+            
+            // Usa DOMParser para extrair o texto do HTML do Doc
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(htmlText, 'text/html');
+            
+            // Extrai o texto principal (ajuste o seletor se necessário, baseado no HTML gerado)
+            const textoAlmoco = doc.querySelector('body') ? doc.querySelector('body').textContent.trim() : 'Texto não encontrado.';
+            
+            // Insere no container
+            document.getElementById('almoco-container').innerHTML = `<p>${textoAlmoco}</p>`;
+        } catch (error) {
+            console.error('Erro ao carregar almoço do dia:', error);
+            // Fallback: mensagem de erro
+            document.getElementById('almoco-container').innerHTML = '<p>Erro ao carregar informações. Tente recarregar a página.</p>';
+        }
+    }
+
+    // Carrega o texto quando a página carrega
+    window.addEventListener('load', loadAlmocoDoDia);
+</script>
