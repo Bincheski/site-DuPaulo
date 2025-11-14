@@ -1,42 +1,55 @@
-<!-- Seção para Almoço do Dia -->
-<section class="py-16 bg-white">
-    <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-stone-800 mb-4">
-            Almoço do <span class="text-yellow-500">Dia</span>
-        </h2>
-        <div id="almoco-container" class="max-w-2xl mx-auto text-stone-700 text-lg">
-            <!-- O texto do Google Docs será inserido aqui -->
-            <p>Carregando informações do almoço...</p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Site do Restaurante DuPaulo - Almoço do Dia atualizado via Google Docs." />
+    <meta name="keywords" content="restaurante, DuPaulo, almoço do dia, cardápio" />
+    <title>Restaurante DuPaulo - Almoço do Dia</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body class="bg-stone-100 font-sans">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-red-700 via-red-800 to-gray-900 shadow-lg sticky top-0 z-20">
+        <div class="container mx-auto px-4 py-4 flex justify-center items-center">
+            <div class="flex items-center space-x-4">
+                <img src="./img/icone logo fundo preto.png" alt="Logo do Restaurante DuPaulo" class="w-20 h-20" />
+                <h1 class="text-2xl font-extrabold text-white tracking-wide hidden md:block">Restaurante DuPaulo</h1>
+            </div>
         </div>
-    </div>
-</section>
+    </header>
 
-<!-- JavaScript para carregar texto do Google Docs -->
-<script>
-    // URL pública do seu Google Doc (substitua pela sua)
-    const googleDocURL = 'https://docs.google.com/document/d/e/2PACX-1vTCKU6YXHj1q84NZrw1NdeNJl7TnXFXxRoTteJSnkQIltNOWhv6V7HoW367jp47KjJ8iUS1L0rHekbw/pub'; // Substitua SEU_DOC_ID
+    <!-- Seção Principal: Almoço do Dia -->
+    <main class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-stone-800 mb-4">
+                Almoço do <span class="text-yellow-500">Dia</span>
+            </h2>
+            <p class="text-stone-600 text-lg mb-8 max-w-2xl mx-auto">
+                Informações atualizadas diariamente diretamente do nosso Google Docs. Edite o documento para mudanças automáticas no site!
+            </p>
+            
+            <!-- Iframe do Google Docs -->
+            <div class="max-w-4xl mx-auto bg-gray-50 rounded-lg shadow-lg overflow-hidden">
+                <iframe src="https://docs.google.com/document/d/e/2PACX-1vTCKU6YXHj1q84NZrw1NdeNJl7TnXFXxRoTteJSnkQIltNOWhv6V7HoW367jp47KjJ8iUS1L0rHekbw/pub?embedded=true" 
+                        width="100%" 
+                        height="600" 
+                        style="border: none;" 
+                        allowfullscreen 
+                        loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </main>
 
-    async function loadAlmocoDoDia() {
-        try {
-            const response = await fetch(googleDocURL);
-            const htmlText = await response.text();
-            
-            // Usa DOMParser para extrair o texto do HTML do Doc
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(htmlText, 'text/html');
-            
-            // Extrai o texto principal (ajuste o seletor se necessário, baseado no HTML gerado)
-            const textoAlmoco = doc.querySelector('body') ? doc.querySelector('body').textContent.trim() : 'Texto não encontrado.';
-            
-            // Insere no container
-            document.getElementById('almoco-container').innerHTML = `<p>${textoAlmoco}</p>`;
-        } catch (error) {
-            console.error('Erro ao carregar almoço do dia:', error);
-            // Fallback: mensagem de erro
-            document.getElementById('almoco-container').innerHTML = '<p>Erro ao carregar informações. Tente recarregar a página.</p>';
-        }
-    }
-
-    // Carrega o texto quando a página carrega
-    window.addEventListener('load', loadAlmocoDoDia);
-</script>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Restaurante DuPaulo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
