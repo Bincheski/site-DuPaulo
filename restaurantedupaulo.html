@@ -52,4 +52,15 @@
         </div>
     </footer>
 </body>
+
+<script>
+  const iframe = document.createElement('iframe');
+  iframe.src = "https://docs.google.com/document/d/e/2PACX-1vTCKU6YXHj1q84NZrw1NdeNJl7TnXFXxRoTteJSnkQIltNOWhv6V7HoW367jp47KjJ8iUS1L0rHekbw/pub?embedded=true&t=" + new Date().getTime();
+  iframe.width = "100%";
+  iframe.height = "600";
+  iframe.style.border = "none";
+  iframe.loading = "lazy";
+  document.querySelector('#doc-frame').appendChild(iframe);
+</script>
+
 </html>
