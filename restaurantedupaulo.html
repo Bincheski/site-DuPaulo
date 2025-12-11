@@ -162,9 +162,6 @@
                 <button id="lunch-tab" class="px-6 py-3 rounded-full font-bold transition-all duration-300 bg-yellow-400 text-black">
                     Almoço
                 </button>
-                <button id="dinner-tab" class="px-6 py-3 rounded-full font-bold transition-all duration-300 text-white hover:text-yellow-400">
-                    Hambúrgueres
-                </button>
             </div>
         </div>
 
@@ -701,31 +698,7 @@
             }
         });
 
-        // Menu tabs
-const lunchTab = document.getElementById('lunch-tab');
-const dinnerTab = document.getElementById('dinner-tab');
-const lunchMenu = document.getElementById('lunch-menu');
-const dinnerMenu = document.getElementById('dinner-menu');
-
-lunchTab.addEventListener('click', () => {
-  lunchTab.classList.add('bg-yellow-400', 'text-black');
-  lunchTab.classList.remove('text-white');
-  dinnerTab.classList.remove('bg-red-500', 'text-white');
-  dinnerTab.classList.add('text-white');
-
-  lunchMenu.classList.remove('hidden');
-  dinnerMenu.classList.add('hidden');
-});
-
-dinnerTab.addEventListener('click', () => {
-  dinnerTab.classList.add('bg-red-500', 'text-white');
-  dinnerTab.classList.remove('text-white');
-  lunchTab.classList.remove('bg-yellow-400', 'text-black');
-  lunchTab.classList.add('text-white');
-
-  dinnerMenu.classList.remove('hidden');
-  lunchMenu.classList.add('hidden');
-});
+       
 
 // Smooth scroll function
 function scrollToSection(sectionId) {
