@@ -1,36 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Site do Restaurante DuPaulo - Almoço do Dia atualizado via Google Docs." />
-    <meta name="keywords" content="restaurante, DuPaulo, almoço do dia, cardápio" />
-    <title>Restaurante DuPaulo - Almoço do Dia</title>
-    <!-- Tailwind CSS -->
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://lumi.new/lumi.ing/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante DuPaulo - Almoço e Hambúrgueres</title>
+    <meta name="description" content="Restaurante DuPaulo - Deliciosos almoços durante o dia e hambúrgueres artesanais à noite. Venha saborear no local!">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <style>
-        /* Animações básicas usando Tailwind-like, mas minimal */
-        .fade-in {
-            animation: fadeIn 1s ease-in-out;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'bounce-slow': 'bounce 2s infinite',
+                        'pulse-slow': 'pulse 3s infinite',
+                    }
+                }
+            }
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        /* Textura de papel para cardápio */
-        .menu-bg {
-            background-image: url('https://www.transparenttextures.com/patterns/paper.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-    </style>
+    </script>
 </head>
-<body class="bg-gradient-to-br from-stone-100 via-gray-50 to-stone-200 font-sans min-h-screen">
+<body class="bg-stone-900 text-stone-200 font-sans leading-relaxed">
     <!-- Header -->
-    <header id="header" class="fixed top-13 w-full z-20 transition-all duration-300 bg-transparent-900 h-13">
+<!-- Header -->
+<header id="header" class="fixed top-13 w-full z-20 transition-all duration-300 bg-transparent-900 h-13">
     <div class="container mx-auto px-5 py-5">
         <div class="flex items-center justify-between">
             <!-- Logo -->
@@ -74,39 +68,15 @@
     </nav>
 </header>
 
-    <!-- Seção Principal: Almoço do Dia -->
-    <main class="pt-44 md:pt-60 bg-stone-900 fade-in">
-        <div class="container mx-auto px-4 md:px-8 text-center">
-            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                Almoço do <span class="text-yellow-500 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">Dia</span>
-            </h2>
-            <p class="text-white text-base md:text-lg mb-10 max-w-3xl mx-auto leading-relaxed">
-                Informações atualizadas diariamente diretamente do nosso restaurante. Desfrute de pratos frescos e deliciosos!
-            </p>
-            
-            <!-- Container do Cardápio com Aparência de Menu usando Tailwind -->
-            <div class="max-w-2xl mx-auto menu-bg rounded-3xl overflow-hidden border-2 border-yellow-600 shadow-2xl hover:shadow-3xl transition-shadow duration-300">
-                <!-- Cabeçalho do Cardápio -->
-                <div class="bg-gradient-to-r from-amber-800 to-yellow-600 py-4 px-6 text-center text-white font-serif">
-                    <h3 class="text-2xl md:text-3xl font-bold flex items-center justify-center">
-                        <i class="fas fa-utensils mr-3"></i> Cardápio do Dia <i class="fas fa-utensils ml-3"></i>
-                    </h3>
-                    <p class="text-sm md:text-base mt-2 opacity-90">Pratos frescos e preparados com amor</p>
-                </div>
-                <!-- Conteúdo do Cardápio (Iframe) -->
-                <div class="bg-white bg-opacity-90 p-4 md:p-6 rounded-b-2xl">
-                    <div class="relative" id="doc-frame">
-                        <!-- Loading Spinner usando Tailwind -->
-                        <div class="absolute inset-0 flex items-center justify-center bg-gray-100 rounded-lg" id="loading-spinner">
-                            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-500"></div>
-                        </div>
-                        <!-- Iframe será inserido aqui pelo script -->
-                    </div>
-                </div>
-            </div>
-        </div>
 
-         <!-- Content -->
+   <!-- Hero Section -->
+<section id="inicio" class="min-h-screen lg:min-h-[900px] xl:min-h-[1000px] flex items-center justify-center relative overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('./img/capa de fundo hero.png');">
+        <div class="absolute inset-0 bg-stone-900/70"></div>
+    </div>
+
+ <!-- Content -->
 <div class="relative z-10 container mx-auto px-4 py-32 text-center"> <!-- espaçamento vertical aumentado -->
   <div class="max-w-4xl mx-auto mt-16"> <!-- margem superior extra -->
     
@@ -144,6 +114,14 @@
   </div>
 </div>
 
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+        <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+            <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse-slow"></div>
+        </div>
+    </div>
+</section>
+
 <!-- cardapio -->
 <section id="cardapio" class="py-20 bg-gray-900">
     <div class="container mx-auto px-4">
@@ -161,6 +139,9 @@
             <div class="bg-black rounded-full p-2">
                 <button id="lunch-tab" class="px-6 py-3 rounded-full font-bold transition-all duration-300 bg-yellow-400 text-black">
                     Almoço
+                </button>
+                <button id="dinner-tab" class="px-6 py-3 rounded-full font-bold transition-all duration-300 text-white hover:text-yellow-400">
+                    Hambúrgueres
                 </button>
             </div>
         </div>
@@ -194,6 +175,39 @@
                 <div class="p-6">
                     <h3 class="text-white font-bold text-xl mb-2">Salmão Grelhado</h3>
                     <p class="text-gray-400 text-sm mb-4">Salmão fresco com molho de maracujá e quinoa</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dinner Menu -->
+        <div id="dinner-menu" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 hidden">
+            <div class="bg-black rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-300">
+                <a href="https://images.pexels.com/photos/1639565/pexels-photo-1639565.jpeg?auto=compress&cs=tinysrgb&w=1260" data-lightbox="menu" data-title="DuPaulo Burger">
+                    <img src="https://images.pexels.com/photos/1639565/pexels-photo-1639565.jpeg?auto=compress&cs=tinysrgb&w=400" alt="DuPaulo Burger" class="w-full h-48 object-cover">
+                </a>
+                <div class="p-6">
+                    <h3 class="text-white font-bold text-xl mb-2">DuPaulo Burger</h3>
+                    <p class="text-gray-400 text-sm mb-4">Blend especial, queijo cheddar, bacon e molho da casa</p>
+                </div>
+            </div>
+
+            <div class="bg-black rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-300">
+                <a href="https://images.pexels.com/photos/1556909/pexels-photo-1556909.jpeg?auto=compress&cs=tinysrgb&w=1260" data-lightbox="menu" data-title="Bacon Master">
+                    <img src="https://images.pexels.com/photos/1556909/pexels-photo-1556909.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Bacon Master" class="w-full h-48 object-cover">
+                </a>
+                <div class="p-6">
+                    <h3 class="text-white font-bold text-xl mb-2">Bacon Master</h3>
+                    <p class="text-gray-400 text-sm mb-4">Duplo bacon, queijo suíço, cebola caramelizada</p>
+                </div>
+            </div>
+
+            <div class="bg-black rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-300">
+                <a href="https://images.pexels.com/photos/1552635/pexels-photo-1552635.jpeg?auto=compress&cs=tinysrgb&w=1260" data-lightbox="menu" data-title="Veggie Deluxe">
+                    <img src="https://images.pexels.com/photos/1552635/pexels-photo-1552635.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Veggie Deluxe" class="w-full h-48 object-cover">
+                </a>
+                <div class="p-6">
+                    <h3 class="text-white font-bold text-xl mb-2">Veggie Deluxe</h3>
+                    <p class="text-gray-400 text-sm mb-4">Hambúrguer vegano com cogumelos e rúcula</p>
                 </div>
             </div>
         </div>
@@ -292,7 +306,7 @@
         </div>
     </section>
 
-     <!-- Filiais -->
+    <!-- Filiais -->
     <section id="filiais" class="py-20 bg-neutral-900">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
@@ -305,20 +319,25 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- xis du paulo -->
+                <!-- Restaurante DuPaulo -->
                 <div class="bg-gray-900 rounded-lg p-6 hover:bg-gray-800 transition-colors duration-300">
                     <div class="flex items-center mb-4">
                         <div class="bg-white-400 p-2 rounded-full mr-3">
                             <img src="./img/icone maps.png" alt="Ícone" class="w-8 h-8" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            </svg>
                         </div>
-                        <h3 class="text-white font-bold text-xl">Xis DuPaulo</h3>
+                        <h3 class="text-white font-bold text-xl">Restaurante DuPaulo</h3>
                     </div>
-                    <p class="text-gray-400 mb-4">Rua Doutor Caio Brandão, 95<br>Humaitá - Porto Alegre, RS</p>
-                    <p class="text-green-400 font-semibold mb-2">Lanches e Alaminutas</p>
-                    <p class="text-yellow-400 font-semibold text-sm">Lanche</p>
-                    <p class="text-gray-300 text-sm">Segunda a Sábado 10h, às 22h30</p>
-                    <button onclick="window.open('tel:+5551989056120')" class="text-yellow-400 hover:text-white transition-colors duration-300">
-                        (51) 98905-6120
+                    <p class="text-gray-400 mb-4">Rua doutor caio brandão de melo, 115<br>Humaitá - Porto Alegre, RS</p>
+                    <p class="text-yellow-400 font-semibold mb-2">Matriz</p>
+                    <div>
+                    <p class="text-yellow-400 font-semibold text-sm">Almoço</p>
+                    <p class="text-gray-300 text-sm">Segunda a Sexta 11h, às 14h30h</p>
+                    <p class="text-gray-300 text-sm">Sábados e Feriados 11h, às 15h</p>
+                    </div>
+                    <button onclick="window.open('tel:+5551999094189')" class="text-yellow-400 hover:text-white transition-colors duration-300">
+                        (51) 99909-4189
                     </button>
                 </div>
 
@@ -338,22 +357,20 @@
                     </button>
                 </div>
 
-                 <!-- Restaurante e hamburgueria -->
+                <!-- xis du paulo -->
                 <div class="bg-gray-900 rounded-lg p-6 hover:bg-gray-800 transition-colors duration-300">
                     <div class="flex items-center mb-4">
                         <div class="bg-white-400 p-2 rounded-full mr-3">
                             <img src="./img/icone maps.png" alt="Ícone" class="w-8 h-8" />
                         </div>
-                        <h3 class="text-white font-bold text-xl">Rest e Hamburgueria DuPaulo</h3>
+                        <h3 class="text-white font-bold text-xl">Xis DuPaulo</h3>
                     </div>
-                    <p class="text-gray-400 mb-4">Av. Clóvis Paim Grivot, 175<br>Humaitá - Porto Alegre, RS</p>
-                    <p class="text-green-400 font-semibold mb-2">Almoço e hamburgueres</p>
-                    <p class="text-yellow-400 font-semibold text-sm">Almoço</p>
-                    <p class="text-gray-300 text-sm">Segunda a Sábados 11h, às 16h</p>
-                    <p class="text-yellow-400 font-semibold text-sm">Hambúrguer</p>
-                    <p class="text-gray-300 text-sm">Segunda a Sábados 18h, às 23h</p>
-                    <button onclick="window.open('tel:+555133747501')" class="text-yellow-400 hover:text-white transition-colors duration-300">
-                        (51) 3374-7501
+                    <p class="text-gray-400 mb-4">Rua Doutor Caio Brandão, 95<br>Humaitá - Porto Alegre, RS</p>
+                    <p class="text-green-400 font-semibold mb-2">Lanches e Alaminutas</p>
+                    <p class="text-yellow-400 font-semibold text-sm">Lanche</p>
+                    <p class="text-gray-300 text-sm">Segunda a Sábados 10h, às 22h30</p>
+                    <button onclick="window.open('tel:+5551989056120')" class="text-yellow-400 hover:text-white transition-colors duration-300">
+                        (51) 98905-6120
                     </button>
                 </div>
             </div>
@@ -668,18 +685,7 @@
 </div>
 
     <script>
-        // Script para inserir o iframe dinamicamente (mantido do original, com correção para o id)
-        const iframe = document.createElement('iframe');
-        iframe.src = "https://docs.google.com/document/d/e/2PACX-1vTCKU6YXHj1q84NZrw1NdeNJl7TnXFXxRoTteJSnkQIltNOWhv6V7HoW367jp47KjJ8iUS1L0rHekbw/pub?embedded=true&t=" + new Date().getTime();
-        iframe.width = "100%";
-        iframe.height = "600";
-        iframe.style.border = "none";
-        iframe.loading = "lazy";
-        iframe.onload = function() {
-            document.getElementById('loading-spinner').style.display = 'none';
-        };
-        document.querySelector('#doc-frame').appendChild(iframe);
-             // Mobile menu toggle
+        // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         
@@ -698,7 +704,31 @@
             }
         });
 
-       
+        // Menu tabs
+const lunchTab = document.getElementById('lunch-tab');
+const dinnerTab = document.getElementById('dinner-tab');
+const lunchMenu = document.getElementById('lunch-menu');
+const dinnerMenu = document.getElementById('dinner-menu');
+
+lunchTab.addEventListener('click', () => {
+  lunchTab.classList.add('bg-yellow-400', 'text-black');
+  lunchTab.classList.remove('text-white');
+  dinnerTab.classList.remove('bg-red-500', 'text-white');
+  dinnerTab.classList.add('text-white');
+
+  lunchMenu.classList.remove('hidden');
+  dinnerMenu.classList.add('hidden');
+});
+
+dinnerTab.addEventListener('click', () => {
+  dinnerTab.classList.add('bg-red-500', 'text-white');
+  dinnerTab.classList.remove('text-white');
+  lunchTab.classList.remove('bg-yellow-400', 'text-black');
+  lunchTab.classList.add('text-white');
+
+  dinnerMenu.classList.remove('hidden');
+  lunchMenu.classList.add('hidden');
+});
 
 // Smooth scroll function
 function scrollToSection(sectionId) {
@@ -768,6 +798,5 @@ function openModal() {
   }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-    </script>
 </body>
-</html>
+<html>
